@@ -1,6 +1,28 @@
 # ![go-orb Logo](../docs/logo-header.png) [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/go-orb/go-orb?tab=doc) [![Go Report Card](https://goreportcard.com/badge/github.com/go-orb/go-orb)](https://goreportcard.com/report/github.com/go-orb/go-orb) [![Discord](https://dcbadge.vercel.app/api/server/sggGS389qb?style=flat-square&theme=default-inverted)](https://discord.gg/sggGS389qb)
 
-Orb is a framework for distributed systems development, it can be seen as the successor of [go-micro.dev/v4](https://github.com/go-micro/go-micro).
+Go Orb is a framework for distributed systems development, it can be seen as the successor of [go-micro.dev/v4](https://github.com/go-micro/go-micro).
+
+## Overview
+
+Go Orb provides the core requirements for distributed systems development including RPC and Event driven communication.
+The Go Orb philosophy is sane defaults with a pluggable architecture. We provide defaults to get you started quickly
+but everything can be easily swapped out.
+
+## Features
+
+Go Orb abstracts away the details of distributed systems. Here are the main features.
+
+- **Config** - Load dynamic config from anywhere. The config interface provides a way to load application level config from any source such as env vars, file. You can merge the sources and even define fallbacks.
+
+- **Service Discovery** - Automatic service registration and name resolution. Service discovery is at the core of Go Orb service development. When service A needs to speak to service B it needs the location of that service. The default discovery mechanism is multicast DNS (mdns), a zeroconf system.
+
+- **Message Encoding** - Dynamic message encoding based on content-type. The client and server will use codecs along with content-type to seamlessly encode and decode Go types for you. Any variety of messages could be encoded and sent from different clients. The client and server handle this by default. This includes protobuf and json by default.
+
+- **RPC Client/Server** - RPC based request/response with support for bidirectional streaming. We provide an abstraction for synchronous communication. A request made to a service will be automatically resolved, load balanced, dialled and streamed.
+
+- **RPC over event topics** - RPC over event topics, makes RPC even easier.
+
+- **Pluggable Interfaces** - Go Orb makes use of Go interfaces for each distributed system abstraction. Because of this these interfaces are pluggable and allows Go Orb to be runtime agnostic. You can plugin any underlying technology.
 
 ## Examples
 
