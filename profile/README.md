@@ -2,6 +2,8 @@
 
 Go Orb is a framework for distributed systems development, it can be seen as the successor of [go-micro.dev/v4](https://github.com/go-micro/go-micro).
 
+The core of go-orb has been completly refactored, to support the removal of reflect and intodruction of wire.
+
 ## Overview
 
 Go Orb provides the core requirements for distributed systems development including RPC and Event driven communication.
