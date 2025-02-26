@@ -7,14 +7,13 @@ The core of go-orb has been completely refactored, to support the removal of ref
 ## Overview
 
 Go Orb provides the core requirements for distributed systems development including RPC and Event driven communication.
-The Go Orb philosophy is sane defaults with a pluggable architecture. We provide defaults to get you started quickly
-but everything can be easily swapped out.
+The Go Orb philosophy is sane defaults with a pluggable architecture. We provide defaults to get you started quickly but everything can be easily swapped out.
 
 ## Features
 
 Go Orb abstracts away the details of distributed systems. Here are the main features.
 
-- **Config** - Load dynamic config from anywhere. The config interface provides a way to load application level config from any source such as env vars, file. You can merge the sources and even define fallbacks.
+- **Config** - Load dynamic config from anywhere. The config interface provides a way to load application level config from any source such as env vars, file and http. You can merge the sources and even define fallbacks.
 
 - **Service Discovery** - Automatic service registration and name resolution. Service discovery is at the core of Go Orb service development. When service A needs to speak to service B it needs the location of that service. The default discovery mechanism is multicast DNS (mdns), a zeroconf system.
 
@@ -166,7 +165,7 @@ We made sure that go-orb/go-orb (the core) is just a bunch of interfaces as well
 
 #### Linted and analyzed
 
-Everything is linted and staticaly analyzed by golangcli-lint, enforced with CI/CD pipelines on github.
+Everything is linted and staticaly analyzed by golangci-lint, enforced with CI/CD pipelines on github.
 
 ## Community
 
